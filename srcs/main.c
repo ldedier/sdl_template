@@ -6,13 +6,13 @@
 /*   By: ldedier <ldedier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/26 21:09:19 by ldedier           #+#    #+#             */
-/*   Updated: 2018/08/14 20:09:31 by ldedier          ###   ########.fr       */
+/*   Updated: 2019/02/09 19:57:53 by ldedier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sdl_template.h"
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	t_env e;
 

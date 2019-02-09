@@ -6,7 +6,7 @@
 /*   By: ldedier <ldedier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/01 16:20:37 by ldedier           #+#    #+#             */
-/*   Updated: 2019/02/01 16:20:37 by ldedier          ###   ########.fr       */
+/*   Updated: 2019/02/09 19:57:22 by ldedier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_init_sdl_2(t_sdl *sdl)
 	if (!(sdl->renderer = SDL_CreateRenderer(sdl->window, -1, 0)))
 		return (1);
 	if (!(sdl->w_surface = SDL_CreateRGBSurface(0, sdl->screen.w,
-				sdl->screen.h, 32, 0, 0, 0, 0)))
+					sdl->screen.h, 32, 0, 0, 0, 0)))
 		return (1);
 	if (SDL_RenderSetLogicalSize(sdl->renderer, sdl->screen.w,
 				sdl->screen.h) < 0)
@@ -45,13 +45,13 @@ int		ft_init_sdl(t_sdl *sdl)
 	ft_set_dimensions(sdl);
 	if (TTF_Init() < 0)
 		return (1);
-	 if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
-		 return (0);
-	 Mix_VolumeMusic(32);
-	 if (!(sdl->window = SDL_CreateWindow("sdl_template", sdl->screen.x,
-			sdl->screen.y, sdl->screen.w, sdl->screen.h,
-				SDL_WINDOW_FULLSCREEN_DESKTOP)))
-		 return (1);
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
+		return (0);
+	Mix_VolumeMusic(32);
+	if (!(sdl->window = SDL_CreateWindow("sdl_template", sdl->screen.x,
+					sdl->screen.y, sdl->screen.w, sdl->screen.h,
+					SDL_WINDOW_FULLSCREEN_DESKTOP)))
+		return (1);
 	if (ft_init_sdl_2(sdl))
 		return (1);
 	SDL_SetRelativeMouseMode(SDL_TRUE);

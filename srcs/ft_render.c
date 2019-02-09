@@ -6,7 +6,7 @@
 /*   By: ldedier <ldedier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/14 21:46:38 by ldedier           #+#    #+#             */
-/*   Updated: 2018/08/14 22:02:21 by ldedier          ###   ########.fr       */
+/*   Updated: 2019/02/09 19:57:35 by ldedier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_render_world_gpu(t_env *e)
 	SDL_RenderFillRect(e->sdl.renderer, &rect);
 }
 
-int	ft_render_world_cpu(t_env *e)
+int		ft_render_world_cpu(t_env *e)
 {
 	SDL_Rect rect;
 
